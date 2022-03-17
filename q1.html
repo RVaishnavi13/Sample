@@ -1,0 +1,131 @@
+<html>
+	<head>
+		<script>
+			function MUJAHEED() {
+				var name =
+					document.forms["RegForm"]["Name"];
+				var idno =
+					document.forms["RegForm"]["IDNO"];
+                                var phone =
+					document.forms["RegForm"]["Mobile"];
+                                var address =
+					document.forms["RegForm"]["Address"];
+
+                                var branch =
+					document.forms["RegForm"]["Branch"];
+                                
+				var cgpa=
+					document.forms["RegForm"]["CGPA"];
+                                var sem =
+					document.forms["RegForm"]["Sem"];
+				
+
+				if (name.value == "") {
+					window.alert("Please enter your name.");
+					name.focus();
+					return false;
+				}
+
+				if (address.value == "") {
+					window.alert("Please enter your address.");
+					address.focus();
+					return false;
+				}
+
+				if (idno.value == "") {
+					window.alert("Please enter your idno.");
+					idno.focus();
+					return false;
+				}
+
+				if (mobile.value == "") {
+					window.alert(
+					"Please enter your mobile number.");
+					phone.focus();
+					return false;
+				}
+
+				if (cgpa.value == "") {
+					window.alert("Please enter your password");
+					cgpa.focus();
+					return false;
+				}
+                                if (sem.value == "") {
+					window.alert("Please enter your sem.");
+					sem.focus();
+					return false;
+				}
+
+				if (what.selectedIndex < 1) {
+					alert("Please enter your course.");
+					what.focus();
+					return false;
+				}
+
+				return true;
+			}
+		</script>
+
+		<style>
+			div {
+				box-sizing: border-box;
+				width: 100%;
+				border: 100px solid black;
+				float: left;
+				align-content: center;
+				align-items: center;
+			}
+
+			form {
+				margin: 0 auto;
+				width: 600px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<h1 style="text-align: center;">PLACEMENT REGISTRATION FORM</h1>
+		<form name="RegForm" action="/submit.php"
+			onsubmit="return MUJAHEED()" method="post">
+			<p>Name: <input type="text"
+							size="65" name="Name" /></p>
+			<br />
+			<p>Address: <input type="text"
+							size="65" name="Address" />
+		</p>
+			<br />
+			<p>Id No: <input type="text"
+							size="65" name="Id No" /></p>
+			<br />
+			<p>CGPA: <input type="text"
+						size="65" name="CGPA" /></p>
+			<br />
+			<p>Mobile: <input type="text"
+						size="65" name="Mobile" /></p>
+			<br />
+                        <p>Sem: <input type="text"
+						size="65" name="Sem" /></p>
+			<br />
+
+
+			<p>
+				SELECT YOUR COURSE
+				<select type="text" value="" name="Subject">
+					<option>CSE</option>
+					<option>ECE</option>
+					<option>EEE</option>
+					<option>MECH</option>
+					<option>COM</option>
+				</select>
+			</p>
+			<br />
+			
+			
+				<input type="submit"
+					value="send" name="Submit" />
+				<input type="reset"
+					value="Reset" name="Reset" />
+			</p>
+		</form>
+	</body>
+</html>
